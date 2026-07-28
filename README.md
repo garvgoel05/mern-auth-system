@@ -201,6 +201,6 @@ npm run dev
 
 ---
 
-# 👨 Author
+#  Author
 
 Developed by **Garv Goel** as part of a MERN Stack Internship Technical Assessment.
