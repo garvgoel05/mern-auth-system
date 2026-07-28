@@ -22,7 +22,7 @@ const hashToken = (token) =>
 const cookieOptions = {
   httpOnly: true, // JS on the page can't read it -> mitigates XSS token theft
   secure: process.env.NODE_ENV === "production", // HTTPS only in prod
-  sameSite: "strict", // mitigates CSRF
+  sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
   maxAge: REFRESH_EXPIRY_MS,
   path: "/api/auth", // only sent to auth routes (refresh/logout)
 };
